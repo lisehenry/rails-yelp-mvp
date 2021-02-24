@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# puts "Creating 5 fake restaurants."
+
+# 5.times do
+
+# puts "Finished!"
+

@@ -1,33 +1,30 @@
-<h1><%= @restaurant.name %></h1>
+<div class="card">
+  <h1><%= @restaurant.name %></h1>
 
-<strong>Address: </strong><%= @restaurant.address %><br>
-<strong>Phone: </strong><%= @restaurant.phone_number %><br>
-<strong>Category: </strong><%= @restaurant.category %><br>
+  <p><i class="fas fa-map-marked-alt"></i> : <%= @restaurant.address %></p>
+  <p><i class="fas fa-phone"></i> : <%= @restaurant.phone_number %></p>
+  <p><i class="fas fa-utensils"></i> : <%= @restaurant.category %></p>
+  <br>
 
-<!-- Reviews -->
-<strong>Reviews: </strong>
-<ul>
-  <% @restaurant.reviews.each do |review| %>
-    <li>
-      <!-- Rating -->
-      <% review.rating.times do %>
-        <i class="fas fa-star" style="color: #ffca2d;"></i>
-      <% end %>
+  <!-- Reviews -->
+  <strong>Reviews: </strong>
+  <ul class= "list-inline">
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        <!-- Rating -->
+        <% review.rating.times do %>
+          <i class="fas fa-star" style="color: #ffca2d;"></i>
+        <% end %>
 
-      <% (5 - review.rating).times do %>
-        <i class="far fa-star"></i>
-      <% end %>
-      <!-- ... -->
-      : <em>"<%= review.content %>"</em>
-    </li>
-  <% end %>
-</ul>
-<!-- ... -->
+        <% (5 - review.rating).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
+        <!-- ... -->
+        : <em>"<%= review.content %>"</em>
+      </li>
+    <% end %>
+  </ul>
+  <!-- ... -->
+</div>
 
-<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class: "btn btn-warning" %>
-<br><br>
-<%= link_to 'All restaurants', restaurants_path, class: "btn btn-primary"  %>
-
-
-
-
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class: "btn btn-warning center" %>

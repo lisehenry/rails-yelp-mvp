@@ -13,18 +13,41 @@
 @import "pages/index";
 
 // my CSS
-
 body{
-  padding: 20px;
+  margin:0;
+  padding: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+.navbar{
+  background-color: #f8f8f8;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.navbar-content{
+  margin: 0 15px;
+}
+
+.navbar-content a{
+  text-decoration: none;
+  color: grey;
+}
+
+.navbar-content a:hover{
+  color: black;
 }
 
 .main-container{
   width: 60%;
   margin: auto;
-}
-
-h1{
-  text-align: center;
 }
 
 .cards{
@@ -37,6 +60,7 @@ h1{
 .card{
   padding: 15px;
   box-shadow: 2px 4px 10px grey;
+  border-radius: 7px;
 }
 
 .card h4{
@@ -49,9 +73,10 @@ h1{
 
 .card .btn{
   margin: 0;
+  font-size: 15px;
 }
 
-
-
-
-
+.center{
+  display: block;
+  margin-top: 20px;
+}

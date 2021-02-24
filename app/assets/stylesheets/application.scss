@@ -11,3 +11,47 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// my CSS
+
+body{
+  padding: 20px;
+}
+
+.main-container{
+  width: 60%;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 30px 0;
+}
+
+.card{
+  padding: 15px;
+  box-shadow: 2px 4px 10px grey;
+}
+
+.card h4{
+  text-align: center;
+}
+
+.card p{
+  margin: 0 0 5px;
+}
+
+.card .btn{
+  margin: 0;
+}
+
+
+
+
+

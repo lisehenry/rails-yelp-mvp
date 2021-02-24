@@ -1,0 +1,21 @@
+<h1>All Restaurants</h1>
+
+<div class="cards">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card">
+      <h4><%= restaurant.name %></h4>
+      <p><i class="fas fa-map-marked-alt"></i> : <%= restaurant.address %></p>
+      <p><i class="fas fa-phone"></i> : <%= restaurant.phone_number %></p>
+      <p><i class="fas fa-utensils"></i> : <%= restaurant.category %></p>
+      <%= link_to 'See details', restaurant_path(restaurant.id), class: "btn btn-outline-primary" %>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-warning"  %>
+
+
+
+
+
+
+
